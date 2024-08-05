@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manual</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script>
+        function Repair_Page() {
+            window.location.href = "repair.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="manual-box">
+        <h1>Manually Enter Car Information</h1>
+        <form>
+            <label for="make">Make:</label>
+            <select id="make" name="make" required>
+                <option value="Toyota">Toyota</option>
+                <option value="Ford">Ford</option>
+                <option value="Chevrolet">Chevrolet</option>
+            </select>
+            <label for="model">Model:</label>
+            <select id="model" name="model" required>
+                <option value="Camry">Camry</option>
+                <option value="Corolla">Corolla</option>
+                <option value="Prius">Prius</option>
+                <option value="Escape">Escape</option>
+                <option value="Focus">Focus</option>
+                <option value="Fusion">Fusion</option>
+                <option value="Cruze">Cruze</option>
+                <option value="Malibu">Malibu</option>
+                <option value="Equinox">Equinox</option>
+            </select>
+            <label for="year">Year:</label>
+            <select id="year" name="year" required>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+            </select>
+            <button type="button" onclick="Repair_Page();">Submit</button>
+        </form>
+        <a href="home.html">Return Home</a>
+    </div>
+</body>
+</html>

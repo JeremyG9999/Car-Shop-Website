@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automatic</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script>
+        function Repair_Page() {
+            window.location.href = "repair.html";
+        }
+        function random_choice(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+        function auto_selection() {
+            var makes = ['Ford', 'Chevy', 'Toyota'];
+            var models = {
+                'Ford': ['Escape', 'Fusion', 'Focus'],
+                'Chevy': ['Cruze', 'Malibu', 'Equinox'],
+                'Toyota': ['Camry', 'Corolla', 'Prius']
+            };
+            var years = ['2021', '2022', '2023', '2024'];
+            var new_make = random_choice(makes);
+            var new_model = random_choice(models[new_make]);
+            var new_year = random_choice(years);
+            var display = document.getElementById('displays');
+            display.value = new_make + " " + new_model + ", " + new_year;
+        }
+    </script>
+</head>
+<body>
+    <div class="automatic-box">
+        <h1>Please Scan</h1>
+            <label for="displays">Selected Car Information:</label><br>
+            <input type="text" id="displays" readonly>
+            <button onclick="auto_selection()">Scan Car</button><br><br>
+            <div class="buttons">
+                <button type="button" onclick="Repair_Page();">Repair Page</button>
+            </div>
+            <a href="manual.html">Manually Enter</a><br><br>
+            <a href="home.html">Return Home</a>
+    </div>
+</body>
+</html>
